@@ -10,18 +10,43 @@ html {
     color: white;
     background-image: url(../images/space-product-bg.jpg);
     background-color: black;
+    text-align: center;
+    text-transform: uppercase;
 }
-/*bg niet op github????? :((((( */
+
+html p {
+    letter-spacing: 8px;
+}
+
+/*bg niet op github????? :((((( 
+random kwam bg er wel maar de html is niet zwart onder de bg (dat zie je als je */
+/*p onichtbaar (onder header) */
 
 
 
-body{
+body {
     margin: 0;
 }
+
+main {
+    display: flex;
+    top: 100%;
+    width: 100%;
+    justify-content: center;
+}
+/* direct onder banner??? */
+
+
+main img {
+    width: 75vw;
+}
+
+/* in het midden???? */
 
 header img {
     height: 3em;
 }
+
 /* logo niet in het midden*/
 
 header div img {
@@ -46,14 +71,15 @@ header {
 
 nav {
     display: none;
-    position: absolute;       
+    position: absolute;
     background-color: red;
     width: 100vw;
     height: 100vw;
     align-items: center;
     flex-direction: column;
 }
-    /*pos fixed maakt alles kapot, bij idles site wel zo/
+
+/*pos fixed maakt alles kapot, bij idles site wel zo/
 moet de hele achtergrond zwart maken, ruimtes tussen de text, midden op de pagina en niet verder scrollen*/
 
 
@@ -120,4 +146,3 @@ label span::before {
 label span::after {
     top: 8px;
 }
-
