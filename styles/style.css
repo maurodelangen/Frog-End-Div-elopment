@@ -8,12 +8,12 @@
 html {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    background-image: url(../images/space-product-bg.jpg);
-    background-color: black;
 }
 
 body{
-    margin: 0
+    margin: 0;
+    background-image: url(../images/space-product-bg.jpg);
+    background-color: black;
 }
 
 header img {
@@ -88,6 +88,10 @@ label {
     position: relative;
     padding-left: 15px;
 }
+
+/*label slecht klikbaar, vraag hulp*/
+
+
 
 label span,
 label span::before,
