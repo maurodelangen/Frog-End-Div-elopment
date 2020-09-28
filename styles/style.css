@@ -16,6 +16,7 @@ html {
 
 html p {
     letter-spacing: 8px;
+    font-weight: 400;
 }
 
 /*bg niet op github????? :((((( 
@@ -28,12 +29,8 @@ body {
     margin: 0;
 }
 
-main {
-    display: flex;
-    top: 100%;
-    width: 100%;
-    justify-content: center;
-}
+main {}
+
 /* direct onder banner??? */
 
 
@@ -60,7 +57,7 @@ header div {
 
 header {
     background-color: aqua;
-    position: fixed;
+    position: static;
     width: 100%;
     text-align: center;
     display: flex;
