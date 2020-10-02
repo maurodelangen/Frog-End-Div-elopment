@@ -1,4 +1,8 @@
 /* CSS Document */
+/* CENTERING NIET GOED*/
+
+
+
 *,
 *::after,
 *::before {
@@ -19,14 +23,37 @@ html p {
     font-weight: 400;
 }
 
+html a {
+    text-decoration: none;
+    font-family: "Arial Black", sans-serif;
+
+}
+
 body {
     margin: 0;
 }
 
+/* link knoppen */
+section a {
+    font-size: 1.25rem;
+    background-color: transparent;
+    padding: 8px 16px;
+    color: white;
+    letter-spacing: -1px;
+    border: 1px solid white;
+    white-space: nowrap;
+}
 
-/*bg niet op github????? :((((( 
-random kwam bg er wel maar de html is niet zwart onder de bg (dat zie je als je */
-/*p onichtbaar (onder header) */
+section a:hover{
+    background-color: white;
+    color: black;
+}
+
+section {
+    margin-bottom: 3em;
+    padding-left: 15px;
+    padding-right: 15px;
+}
 
 /*----------------------HEADER------------------*/
 
@@ -56,14 +83,13 @@ header div {
     padding-right: 15px;
 }
 
-
+/*-------------------------nav----------------*/
 nav {
     display: none;
     position: absolute;
     background-color: black;
     width: 100vw;
     height: 100vw;
-    flex-direction: column;
 }
 
 /*pos fixed maakt alles kapot, bij idles site wel zo/
@@ -92,9 +118,15 @@ input:checked ~ nav {
     top: 100%;
 }
 
+/*  Hoe krijg ik alles in het midden?
+    hoe krijg ik spacing????
+    Hoe krijg ik de header zwart???
+    hoe krijg ik de pagina gevuld en scrollen onmogelijk???*/
+
 input:checked in html {
     background-color: black;
 }
+
 
 label {
     order: -1;
@@ -131,42 +163,99 @@ label span::after {
 
 /*---------------------MAIN------------------------*/
 main {
-padding-top: 6em;
+    padding-top: 6em;
 }
 
-main p{
+main p {
     margin-top: -0.5em;
 }
 
-
-
 main img {
-    width: 60vw;
+    width: 25em;
 }
+
+/* ---------eerste section------------------*/
+
+
 
 /* in het midden???? */
 
-main section{
-    display: flex;
-    justify-content: center;
-    line-height: 1.5;
+
+section:first-of-type a:first-of-type {
+    padding: 0.4em 0.8em;
+    background-color: white;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
 }
 
-main a img{
-    width: 6em;
+
+section:first-of-type div a img{
+    background-color: green;
+        width: 6.5em;
+    padding: 0;
+
 }
 
-main a{
+section:first-of-type a:last-of-type {
+    border: none;
+    font-family: Arial, sans-seriff;
     text-transform: none;
     font-size: 12px;
-    text-decoration: none;
-     color:#6c757d;    
-    background-color:transparent;
-    
+    color: #6c757d;
 }
 
-main a:hover{
-        background-color:transparent;
+section:first-of-type a:last-of-type:hover {
+    background-color: transparent;
     text-decoration: underline;
-     color:#6c757d;;
-} 
+    color: #6c757d;
+    ;
+}
+
+
+/* --------------SPAN BANNER---------------------*/
+section span {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: white;
+    font-family: "Arial Black", sans-serif;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 1.5em;
+
+}
+
+section span::before {
+    height: 1px;
+    background: linear-gradient(90deg, #fff 0, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    width: 50vw;
+}
+
+section span::after {
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, #fff 100%);
+    content: '';
+    width: 50vw;
+}
+
+/* --------------YOUTUBE VIDEO---------------------*/
+iframe {
+    width: 33em;
+    height: 300px;
+    margin-bottom: 3em;
+}
+
+/*----------------BUNDLES----------*/
+section:nth-of-type(3) div {
+    display: flex;
+    width: 50%;
+    height: 5em;
+    border: 1px white solid;
+}
+
+/* bruh waarom doet flex het hier niet ?????*/
