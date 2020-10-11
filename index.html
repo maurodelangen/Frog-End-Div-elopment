@@ -10,88 +10,125 @@
 
 </head>
 
-<body>
 
-    <!-- header -->
-    <header>
+<!-- header -->
+<header>
 
-        <img src="images/idles-band-logo.svg">
-        <input type="checkbox" id="burger-toggle">
-        <nav>
-            <ul>
-                <li><a href='#'>ultra mono</a></li>
-                <li><a href='#'>shop</a></li>
-                <li><a href='#'>tickets</a></li>
-                <li><a href='#'>songkick</a></li>
-                <li><a href='#'>videos</a></li>
-                <li><a href='#'>releases</a></li>
-                <li><a href='#'>calendar</a></li>
-                <li><a href='#'>af gang</a></li>
-            </ul>
-        </nav>
+    <img src="images/idles-band-logo.svg">
+    <nav>
+        <ul>
+            <li><a href='#'>ultra mono</a></li>
+            <li><a href='#'>shop</a></li>
+            <li><a href='#'>tickets</a></li>
+            <li><a href='#'>songkick</a></li>
+            <li><a href='#'>videos</a></li>
+            <li><a href='#'>releases</a></li>
+            <li><a href='#'>calendar</a></li>
+            <li><a href='#'>af gang</a></li>
+        </ul>
+    </nav>
 
-        <label for="burger-toggle">
-            <span></span>
-        </label>
+<!---oud-
+<div>
+    <label for="burger-toggle">
+        <span></span>
+    </label>
+</div>
+------->
+    
+<div class="hamburger">
+    <div></div>
+</div>    
+    
+    <script src="scripts/script.js"></script>
 
-        <div>
-            <img src="images/Profile.svg">
-            <img src="images/basket.svg">
+    <div>
+        <img src="images/Profile.svg">
+        <img src="images/basket.svg">
 
-        </div>
+    </div>
 
-    </header>
+</header>
 
 
-    <main>
+<main>
 
-        <! -------------------LANDING------------------>
+    <div class="overlay"></div>
+
+
+
+    <! -------------------LANDING------------------>
+        <section>
+            <img src="images/UltraMonoCenter.png">
+
+
+            <p>25 september 2020</p>
+
+            <a href="#">out now</a>
+
+            <div>
+                <a href="#"><img src="images/logo-spotify.png"></a>
+                <a href="#"><img src="images/logo-apple-music.png"></a>
+            </div>
+
+            <a href="#">Choose your preferred streaming platform</a>
+        </section>
+
+        <! -------------------Latest video------------------>
+
             <section>
-                <img src="images/UltraMono.svg">
+                <span>Latest video</span>
 
-                <p>25 september 2020</p>
+                <iframe src="https://www.youtube.com/embed/BLcM3fq6Quk?start=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-                <a href="#">out now</a>
+                <a href="#">listen</a>
+            </section>
+            <!------------------------BUNDLES--------------------------->
+            <section>
 
-                <div>
-                    <a href="#"><img src="images/logo-spotify.png"></a>
-                    <a href="#"><img src="images/logo-apple-music.png"></a>
-                </div>
+                <span>Bundles</span>
 
-                <a href="#">Choose your preferred streaming platform</a>
+                <ul>
+                    <li>
+                        <div>
+                            <img src="images/IDLES-AF-Bundle-V5.png" class="babi">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/IDLES-AF-Bundle-V5.png" class="babi">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/IDLES-AF-Bundle-V5.png" class="babi">
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <img src="images/IDLES-AF-Bundle-V5.png" class="babi">
+                        </div>
+                    </li>
+
+                </ul>
+
+                <a href="#">all bundles</a>
+
             </section>
 
-            <! -------------------Latest video------------------>
+            <section>
+                <span>Merchandise</span>
+                <div>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                </div>
 
-                <section>
-                    <span>Latest video</span>
 
-                    <iframe src="https://www.youtube.com/embed/BLcM3fq6Quk?start=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <a href="#">Shop all</a>
 
-                    <a href="#">listen</a>
-                </section>
-
-                <section>
-                    <span>Bundles</span>
-
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <a href="#">all bundles</a>
-
-                </section>
-
- <section>
-                    <span>Merchandise</span>
-
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <a href="#">Shop all</a>
-
-                </section>
+            </section>
 
 
 
@@ -100,18 +137,49 @@
 
 
 
-    </main>
+
+
+</main>
 
 
 
 
 
 
+<!-- FOOTER -->
+<footer>
+    <section>
+        <span>
+            <a href="#"> <img src="images/facebook.svg" class="ide"> </a>
+            <a href="#"> <img src="images/instagram.svg"> </a>
+            <a href="#"> <img src="images/spotify.svg"> </a>
+            <a href="#"> <img src="images/Twitter.svg"> </a>
+            <a href="#"> <img src="images/Youtube.svg"></a>
+            <a href="#"> <img src="images/iTunes.svg"></a>
+        </span>
+
+        <h2>emails suck, ours don't. subscribe.</h2>
+
+        <p>Sign up to receive early access to tickets, news, tour dates, new music and more.</p>
 
 
-    <!-- FOOTER -->
-    <footer>
 
-    </footer>
-    <script src="scripts/script.js"></script>
-</body></html>
+
+        <form>
+            <label>Email adress</label>
+            <input type="email" name="EMAIL" placeholder="Email Address">
+            <input type="submit" value="Subscribe" name="subscribe">
+            <!---- waar is mn shit?? oh noes, form styling?------->
+        </form>
+
+
+        <a href="#">subscribe to the calendar</a>
+        <!------   hoe laat ik icoon van kleur veranderen? 2 plaatjes??
+fill property snap ik niet ----->
+
+    </section>
+</footer>
+<script src="scripts/script.js"></script>
+</body>
+
+</html>
