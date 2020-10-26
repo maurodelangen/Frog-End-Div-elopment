@@ -1,6 +1,7 @@
 /* CSS Document */
-/* CENTERING NIET GOED*/
 
+
+/*vreemde prioriteit problemen opgelost met z-index*/
 
 
 *,
@@ -19,13 +20,6 @@ html {
     text-transform: uppercase;
 }
 
-
-/* er schijnen twee achtergronden te zijn,
-de sterren en daaroverheen een ruis met een opacity, hoe krijg ik dat voor elkaar?????
-
-(kijk images/overlay instructies)
-*/
-
 .overlay {
     position: fixed;
     width: 100%;
@@ -37,11 +31,11 @@ de sterren en daaroverheen een ruis met een opacity, hoe krijg ik dat voor elkaa
     background-image: url(../images/noise.gif);
     opacity: 0.25;
     z-index: -1;
+    background-size: 200px;
+    background-repeat: repeat;
 }
 
 /* hoe krijg ik de overlay over header???*/
-
-
 
 html main p {
     letter-spacing: 8px;
@@ -59,24 +53,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    /*ruis?   background-image: url(../images/noise.gif);      ????  */
-}
-
-
-
-/* link knoppen */
-main section a {
-    font-size: 1.25rem;
-    padding: 8px 16px;
-    color: white;
-    letter-spacing: -1px;
-    border: 1px solid white;
-    white-space: nowrap;
-}
-
-main section a:hover {
-    background-color: white;
-    color: black;
+    overflow: auto;
 }
 
 section {
@@ -84,37 +61,48 @@ section {
 
 }
 
+
+main {
+    padding-top: 4.5em;
+}
+
+/* is ALTIJD GELIJK AAN HEADER HEIGHT */
+
+
 /*----------------------HEADER------------------*/
-
-
 
 header {
     position: fixed;
     width: 100%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    height: 6em;
+    height: 4.5em;
     background-image: url(../images/space-product-bg.jpg);
+    justify-content: space-between;
 }
+
+/* hoe krijg ik de overlay over header???*/
+/* logo niet in het midden*/
+
+
 
 header > img {
     height: 2.5em;
     cursor: pointer;
-
+    left: 50%;
 }
 
-/* logo niet in het midden*/
 
 header div img {
     height: 2.3em;
+    cursor: pointer;
 }
 
 header div:nth-of-type(2) {
-   margin-right: 15px;
+    margin-right: 15px;
 }
 
- header div:first-of-type{
+header div:first-of-type {
     margin-left: 15px;
     position: relative;
     order: -1;
@@ -126,7 +114,7 @@ header div:nth-of-type(2) {
     cursor: pointer;
 }
 
-header div:first-of-type div{
+header div:first-of-type div {
     height: 4px;
     width: 2.5em;
     background: white;
@@ -146,46 +134,13 @@ header div:first-of-type div::after {
 }
 
 header div:first-of-type div::before {
-    transform:translateY(-10px);
+    transform: translateY(-10px);
 }
 
 header div:first-of-type div::after {
-    transform:translateY(10px);
+    transform: translateY(10px);
 }
 
-/*
-header div:first-of-type {
-    order: -1;
-    padding-left: 15px;
-    cursor: pointer;
-}
-
-
-label span,
-label span::before,
-label span::after {
-    display: block;
-    height: 4px;
-    width: 2.5em;
-    background: white;
-    border-radius: 2px;
-    position: relative;
-}
-
-label span::before,
-label span::after {
-    content: '';
-    position: absolute;
-}
-
-label span::before {
-    bottom: 10px;
-}
-
-label span::after {
-    top: 10px;
-}
-*/
 /*-------------------------nav----------------*/
 nav {
     display: none;
@@ -196,15 +151,20 @@ nav {
     top: 0;
 }
 
-/* body overflow hidden   */
-/*pos fixed maakt alles kapot, bij idles site wel zo/
-moet de hele achtergrond zwart maken, ruimtes tussen de text, midden op de pagina en niet verder scrollen*/
 
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
+nav ul li {
+    margin: 1em 0;
+}
+
+
+/*midden van de pagine hoogte????? */
+
 
 nav a {
     text-transform: uppercase;
@@ -214,30 +174,66 @@ nav a {
     font-weight: 900;
 }
 
-.open{
-    display: block;
-}
-
-
 /*  Hoe krijg ik alles in het midden?
     hoe krijg ik spacing????
-    Hoe krijg ik de header zwart???
-    hoe krijg ik de pagina gevuld en scrollen onmogelijk???*/
-
-/*javascript----- input niet sem correct */
-
-
-
 
 /*---------------------MAIN------------------------*/
-main {
-    padding-top: 6em;
-}
 
 main p {
     margin-top: -0.5em;
 }
 
+
+/* --------------SPAN BANNER---------------------*/
+section span {
+    display: flex;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -2px;
+    color: white;
+    font-family: "Arial Black", sans-serif;
+    text-align: center;
+    white-space: nowrap;
+    margin-bottom: 1.5em;
+
+}
+
+section span::before {
+    height: 1px;
+    background: linear-gradient(90deg, #fff 0, rgba(255, 255, 255, 0) 100%);
+    content: '';
+    width: 50vw;
+}
+
+section span::after {
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, #fff 100%);
+    content: '';
+    width: 50vw;
+    margin-right: 0;
+}
+
+/*---------------------------KNOPPEN SECTION EIND------------*/
+main section a {
+    font-size: 1.25rem;
+    padding: 8px 16px;
+    color: white;
+    letter-spacing: -1px;
+    border: 1px solid white;
+    white-space: nowrap;
+}
+
+main section a:hover {
+    background-color: white;
+    color: black;
+}
+
+main section:nth-child(1n+2) a {
+    display: block;
+    width: min-content;
+    margin: auto;
+}
 
 /* ---------eerste section------------------*/
 
@@ -279,9 +275,9 @@ main section:first-of-type div {
     margin-top: 0.5em;
 }
 
-main section:first-of-type div a + a{
+main section:first-of-type div a + a {
     margin-left: 1em;
-    
+
 }
 
 main section:first-of-type > a:last-of-type {
@@ -301,95 +297,148 @@ section:first-of-type > a:last-of-type:hover {
 }
 
 
-/* --------------SPAN BANNER---------------------*/
-section span {
-    display: flex;
-    align-items: center;
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: -2px;
-    color: white;
-    font-family: "Arial Black", sans-serif;
-    text-align: center;
-    white-space: nowrap;
-    margin-bottom: 1.5em;
-
-}
-
-section span::before {
-    height: 1px;
-    background: linear-gradient(90deg, #fff 0, rgba(255, 255, 255, 0) 100%);
-    content: '';
-    width: 50vw;
-}
-
-section span::after {
-    height: 1px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0, #fff 100%);
-    content: '';
-    width: 50vw;
-}
 
 /* --------------YOUTUBE VIDEO---------------------*/
 iframe {
-    width: 95%;
-    height: 13em;
+    width: 30em;
+    height: 19.5em;
     margin-bottom: 3em;
     margin-left: 15px;
     margin-right: 15px;
 }
 
-
-
-main section:nth-child(1n+2) a {
-    display: block;
-    width: min-content;
-    margin: auto;
-}
-
-/*----------------BUNDLES----------*/
-
-
-/*FLEX*/
-
-/* GRID */
-/*
-section:nth-of-type(3) ul{
-display: grid;
-grid-template-columns: auto auto;
-column-gap: 3px;
-grid-row-gap: 3px;    
-}
-*/
-
-
-section:nth-of-type(3) ul {
-    border: 1px solid white;
-    padding-left: 0;
-    /*geen idee waarom padding-left 0 nodig is*/
+/*-------------------BUNDLES------------*/
+section:nth-of-type(3) > div {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    list-style: none;
-    margin-left: 15px;
-    margin-right: 15px;
     margin-bottom: 3em;
 }
 
-section:nth-of-type(3) ul > li {
-    background-color: aqua;
+section:nth-of-type(3) > div > article {
+    /*overlay moet hier niet achter zichtbaar zijn:hoe? 
+    still appears als ik op de Hmenu druk*/
+    margin: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+    text-align: center;
 }
 
-section:nth-of-type(3) ul > li img {
-    width: 5em;
+/*overlay visible Hamburger menu open debug*/
+/*DEBUG WAS EERST article z index -1, maar dat disabled een hover */
+/*overlap debug */
+article {
+    z-index: 0;
 }
+
+header,
+header img,
+header div {
+    z-index: 1;
+}
+
+/*----------------------------*/
+
+
+
+section:nth-of-type(3) > div > article,
+section:nth-of-type(3) div > article > img {
+    height: 15em;
+    width: 15em;
+}
+
+section:nth-of-type(3) > div > article > div {
+    background-color: black;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+}
+
+section:nth-of-type(3) div > article:hover > div {
+    opacity: 0.6;
+    text-align: center;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+
+section:nth-of-type(3) div > article:hover > img {
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+    transition-duration: 1s;
+}
+
+/*HOW TO ANIMATE BACK????*/
+
+
+section:nth-of-type(3) > div > article > div > div {
+    margin-top: 65%;
+    /*    width: 85%;*/
+}
+
+
+/*hoe pas ik breedte aan, dat hij wel in het midden komt*/
+
+section:nth-of-type(3) p {
+    margin: 0;
+    font-size: 12px;
+    letter-spacing: 0;
+    margin-top: 1em;
+
+}
+
+section:nth-of-type(3) h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 900;
+}
+
+/*---------MERCHANDISE S4-------*/
+
+section:nth-of-type(4) > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 3em;
+}
+
+section:nth-of-type(4) > div > article {
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 2px;
+}
+
+section:nth-of-type(4) > div > article {
+    height: 12em;
+    width: 10em;
+}
+
+section:nth-of-type(4) div > article > img{
+    height: 10em;
+    width: 10em;
+}
+
+section:nth-of-type(4) div > article > a{
+    padding: 0;
+    border-style: none;
+    font-size: 16px;
+}
+
+section:nth-of-type(4) div > article:hover > a{
+    text-decoration: underline;
+}
+
+section:nth-of-type(4) div > article > a:hover{
+  background-color: transparent;
+    color: white;
+}
+
 
 /*---------------Footer---------*/
 footer span a img {
     height: 32px;
-}
-
-.ide {
-    fill: red;
 }
 
 
